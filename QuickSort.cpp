@@ -50,5 +50,6 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		std::cout <<  S[i] <<"  ";
 	}
+	std::cout << std::endl;
 	return 0;
 }
