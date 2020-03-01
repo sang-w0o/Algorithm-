@@ -35,7 +35,7 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		std::cout << S[i] << "  ";
 	}
-	delete S;
+	delete[] S;
 	return 0;
 
 }
