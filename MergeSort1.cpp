@@ -26,8 +26,8 @@ void mergeSort(int n, int* S) {
 		mergeSort(h, U);
 		mergeSort(m, V);
 		merge(h, m, U, V, S);
-		delete U;
-		delete V;
+		delete[] U;
+		delete[] V;
 	}
 }
 
@@ -75,6 +75,6 @@ int main() {
 		std::cout << S[i] << " ";
 	}
 	std::cout << std::endl;
-	delete S;
+	delete[] S;
 	return 0;
 }
