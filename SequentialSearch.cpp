@@ -28,6 +28,6 @@ int main() {
 	std::cin >> x;
 	seqsearch(n, S, x, location);
 	std::cout << "The key " << x << " is here : " << location << std::endl;
-	delete S;
+	delete[] S;
 	return 0;
 }
