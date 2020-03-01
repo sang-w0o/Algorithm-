@@ -30,5 +30,5 @@ int main() {
 	std::cin >> x;
 	binsearch(n, S, x, location);
 	std::cout << "The key " << x << " is here : " << location << std::endl;
-	delete S;
+	delete[] S;
 }
