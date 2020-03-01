@@ -62,7 +62,7 @@ void merge2(int low, int mid, int high) {
 	for (int r = low_tmp, s = low; r <= high_tmp || s <= high; r++, s++) {
 		S[s] = U[r];
 	}
-	delete U;
+	delete[] U;
 }
 
 int main() {
