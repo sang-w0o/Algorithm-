@@ -24,7 +24,7 @@ int fib2(int n) {
 		}
 	}
 	int return_val = f[n];
-	delete f;
+	delete[] f;
 	return return_val;
 }
 
