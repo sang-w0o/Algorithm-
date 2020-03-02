@@ -201,7 +201,7 @@ int** make2DArray(int n) {
 	int** temp = new int*[n];
 	for (int i = 0; i < n; i++) {
 		temp[i] = new int[n];
-		memset(temp[i], 1, sizeof(int)*n);
+		memset(temp[i], 0, sizeof(int)*n);
 	}
 	return temp;
 }
