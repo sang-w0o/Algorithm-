@@ -11,7 +11,6 @@ private:
 	int** A;
 	int** B;
 	int** RES;
-	//void strassen(int n, int** A, int** B, int** RES);
 public:
 	Matrix(int n=0);
 	~Matrix();
