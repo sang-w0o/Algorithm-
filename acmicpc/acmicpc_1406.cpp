@@ -23,6 +23,8 @@ char a[600000];
 int main() {
 	scanf("%s", a);
 	stack<char> left, right;
+	// left : 커서 기준 왼쪽 
+	// right : 커서 기준 오른쪽
 
 	size_t n = strlen(a);  // 입력받은 문자열의 길이
 	for (size_t i = 0; i < n; i++) {
@@ -58,6 +60,7 @@ int main() {
 		}
 	}
 
+	//출력을 위해 left의 모든 원소들을 right로 이동한다.
 	while (!left.empty()) {
 		right.push(left.top());
 		left.pop();
