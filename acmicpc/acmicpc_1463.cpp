@@ -48,6 +48,6 @@ int main() {
 
 	int res = makeToOne(N);
 
-	cout << res << '\n';
+	cout << res % 10007 << '\n';
 
 }
