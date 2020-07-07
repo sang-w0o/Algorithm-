@@ -42,7 +42,7 @@ vector<bool> visited;
 
 // 깊이 우선 탐색의 구현
 void dfs(int here) {
-    cout << "DFS Visits" >> here >> '\n';
+    cout << "DFS Visits" << here << '\n';
     for(int i = 0; i < adj[here].size(); i++) {
         int there = adj[here][i];
         // 아직 방문한적이 없다면 방문한다.
