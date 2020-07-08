@@ -134,3 +134,49 @@ vector<int> bfs(int start) {
 
 * BFS의 시간 복잡도는 DFS와 다를 것이 없다. 모든 정점을 한 번씩 방문하며, 정점을 방문할 때마다 인접한 모든 간선을   
   검사하기 때문이다. 따라서 인접 리스트로 구현된 경우에는 `O(V+E)`, 인접 행렬로 구현된 경우에는 `O(V*V)`의 시간 복잡도를 갖는다.
+
+<hr/>
+
+<h2>DFS, BFS의 실제 구현 코드</h2>
+
+* 전제 조건 : `bool visited[입력 최대 크기 + 1]`이 전역 변수이다.
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <cstring>
+using namespace std;
+
+bool visited[MAX + 1];
+
+void dfs(int **adj, int vertex, int size) {
+
+    // adj : 인접행렬식, vertex : dfs를 시작할 정점의 번호
+    // size : 인접행렬이 N*N 크기일 때 N
+    cout << vertex << " ";
+    for(int i = 1; i <= size; i++) {
+        if(adj[vertex][i] && !visited[i]) {
+            dfs(adj, i, size);
+        }
+    }
+}
+
+void bfs(int **adj, int vertex, int size, queue<int> q) {
+
+    // q : 방문해야할 정점들의 목록을 저장하는 큐
+    visited[vertex] = true;
+    q.push(vertex);
+
+    while(!q.empty()) {
+        vertex = q.front();
+        q.pop();
+        cout << vertex << " ";
+        for(int i = 1; i <= size; i++) {
+            if(adj[vertex][i] && !visited[i]) {
+                q.push(i);
+                visited[i] = true;
+            }
+        }
+    }
+}
+```
