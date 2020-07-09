@@ -32,9 +32,9 @@ int main() {
 		cin >> p[i];
 	}
 	
-	// D[N] : Maximum cost to buy N cards.
+	// D[N] : Minimum cost to buy N cards.
 	// D[N] = p[i] + D[n-i]
-	// D[n] = MAX(D[n-i] + p[i]);
+	// D[n] = MIN(D[n-i] + p[i]);
 	// 1 <= i <= N
 	
 	int result = 0;
