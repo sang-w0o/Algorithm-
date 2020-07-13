@@ -51,10 +51,6 @@ int main() {
 		}
 	}
 	cout << result << '\n';
-	
-//	for(int i = 1; i <= N; i++) {
-//		cout << V[i] << " ";
-//	}
 
 	stack<int> s;
 	s.push(arr[index]);
