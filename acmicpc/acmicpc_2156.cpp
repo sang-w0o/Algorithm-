@@ -4,7 +4,8 @@ using namespace std;
 
 // D[n] : n번째 잔을 마실 때 총합 와인의 최대량
 // Case 1 : n-1번째 잔을 마시지 않은 경우 : D[n] = D[n-2] + amount[n]
-// Case 2 : n-1번째 잔을 마신 경우 : D[n-3] + amount[n-1] + amount[n]
+// Case 2 : n-1번째 잔을 마신 경우 : D[n] = D[n-3] + amount[n-1] + amount[n]
+// Case 3 : n-2, n-2번째 잔을 모두 마신 경우 : D[n] = D[n-1]
 int D[MAX];
 
 int max(int a, int b) {
